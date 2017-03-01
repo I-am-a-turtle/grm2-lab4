@@ -79,6 +79,8 @@ public class Student {
     test.addPersonal("2032454744");
     //System.out.println(test.getPersonal());
 
-    System.out.println(test.toString());
+    //System.out.println(test.toString());
+
+    System.out.println("Alison Wong".compareTo("Alison Wang"));
   }
 }
