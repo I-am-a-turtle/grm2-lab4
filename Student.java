@@ -1,4 +1,6 @@
-
+/*
+Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
+*/
 public class Student {
   protected String name = "";
   protected String address = "";
