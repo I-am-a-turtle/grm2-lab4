@@ -1,6 +1,7 @@
 /*
 Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 */
+
 public class Student {
   protected String name = "";
   protected String address = "";
@@ -79,7 +80,7 @@ public class Student {
     test.addPersonal("2032454744");
     //System.out.println(test.getPersonal());
 
-    //System.out.println(test.toString());
+    System.out.println(test.toString());
 
     System.out.println("Alison Wong".compareTo("Alison Wang"));
   }
