@@ -3,6 +3,22 @@
 Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 
 Questions:
+5.5:
+- The runtime for the code in question is O(n^2). The code involves taking two n by n arrays of n^2 numbers and then multiplying each number by its correspondent
+  in the other array. It uses two for loops that take the algorithm through each row and then each column, running n times for every one row, a total of n rows.
+
+5.23:
+- Prove that 5^n - 4n - 1 is divisible by 16 for all n >= 0;
+- (5^n - 4n - 1) % 16 = 0;
+    n = 3
+    5^(n+1) - 4(n+1) - 1 = 5^n * 5 - 4n - 4 - 1 -> 112 % 12 = 0
+    5^n - 4n - 1                                -> 16 % 16 = 0
+    5^(n-1) - 4(n-1) - 1 = 5^n / 5 - 4n + 4 - 1 -> 0 % 16 = 0
+    The statement is true for n, for n+1, and n-1, therefore true for all n.
+
+5.26:
+- Prove Sum(n, i = 1) of 2i = n(n + 1)
+
 ...
 
 Contents of the Java files:

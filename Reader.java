@@ -8,12 +8,15 @@ public class Reader{
 
   public static void main (String[] args){
 
-
-
   Scanner in = new Scanner(System.in);
-  String filename = in.nextLine();
+  while (in.hasNextLine()){
+    String filename = in.nextLine();
+    filename = filename + ", "+ in.nextLine();
+    filename = filename + ", "+ in.nextLine();
+    String divide = in.nextLine();
 
-  System.out.println(filename);
+    System.out.println(filename);
+  }
   }
 
 }
