@@ -2,7 +2,7 @@
 Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 */
 import java.util.Scanner;
-import structure5.*;
+//import structure5.*;
 
 public class Reader{
 

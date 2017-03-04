@@ -4,8 +4,7 @@ Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 
 Questions:
 5.5:
-- The runtime for the code in question is O(n^2). The code involves taking two n by n arrays of n^2 numbers and then multiplying each number by its correspondent
-  in the other array. It uses two for loops that take the algorithm through each row and then each column, running n times for every one row, a total of n rows.
+- The runtime for the code in question is O(n^3) because it uses three for loops.
 
 5.23:
 - Prove that 5^n - 4n - 1 is divisible by 16 for all n >= 0;
