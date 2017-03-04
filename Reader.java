@@ -11,11 +11,14 @@ public class Reader{
   Scanner in = new Scanner(System.in);
   while (in.hasNextLine()){
     String filename = in.nextLine();
-    filename = filename + ", "+ in.nextLine();
-    filename = filename + ", "+ in.nextLine();
+    //filename = filename + ", "+ in.nextLine();
+    //filename = filename + ", "+ in.nextLine();
+    String fileaddress = in.nextLine();
+    String filenumbers = in.nextLine();
     String divide = in.nextLine();
+    String alldata = filename + ", " + fileaddress + ", " + filenumbers
 
-    System.out.println(filename);
+    System.out.println(alldata);
   }
   }
 
