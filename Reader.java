@@ -31,9 +31,6 @@ public class Reader{
       addresses.add(in.nextLine());
       numbers.add(in.nextLine());
       String divide = in.nextLine();
-
-
-
   }
 
 }
