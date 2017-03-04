@@ -16,7 +16,7 @@ public class Reader{
     String fileaddress = in.nextLine();
     String filenumbers = in.nextLine();
     String divide = in.nextLine();
-    String alldata = filename + ", " + fileaddress + ", " + filenumbers
+    String alldata = filename + ", " + fileaddress + ", " + filenumbers;
 
     System.out.println(alldata);
   }
