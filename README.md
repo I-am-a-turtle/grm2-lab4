@@ -17,7 +17,16 @@ Questions:
 
 5.26:
 - Prove Sum(n, i = 1) of 2i = n(n + 1)
+- 
 
+6.3
+- How does bubbleSort perform in the nest and average cases?
+-
+
+6.4
+- On any pass of bubbleSort, if no changes are made, then the relations between all the values are those desired, and the sort is done.
+  Using this information, how fast will bubbleSort run in worst, best and average cases?
+-
 ...
 
 Contents of the Java files:
