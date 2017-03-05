@@ -17,17 +17,24 @@ Questions:
 
 5.26:
 - Prove Sum(n, i = 1) of 2i = n(n + 1)
-- 
+- Let n = n + 1
+  Observe that Sum(n + 1, i = 1) of 2i equals Sum(n, i = 1) of 2i + 2(n + 1)
+  This equals n(n + 1) + 2(n + 1) which equals n^2 + 3n + 2
+  Notice that n^2 + 3n + 2 can be rewritten as (n + 1)(n + 2), which can be rewritten as (n + 1)((n + 1) + 1)
+  In this case, n = n + 1
+  Substitution demonstrates that the result (n + 1)((n + 1) + 1) is equivalent to n(n + 1)
+  Therefore Sum(n, i = 1) of 2i = n(n + 1)
 
 6.3
-- How does bubbleSort perform in the nest and average cases?
--
+- How does bubbleSort perform in the best and average cases?
+- In the best case, bubbleSort
 
 6.4
 - On any pass of bubbleSort, if no changes are made, then the relations between all the values are those desired, and the sort is done.
   Using this information, how fast will bubbleSort run in worst, best and average cases?
--
-...
+- In the best case, bubbleSort only has to go through things once, so its performance is O(n)
+  In the worse case, bubbleSort has to go through both an outer while loop and an inner for loop, which yields O(n^2)
+  The average case is the worst case divided by two, which again yields O(n^2)
 
 Contents of the Java files:
 - Student.java contains the Student class and all necessary attributes
