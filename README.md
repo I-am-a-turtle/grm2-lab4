@@ -27,7 +27,8 @@ Questions:
 
 6.3
 - How does bubbleSort perform in the best and average cases?
-- In the best case, bubbleSort
+- In the best case, bubbleSort will run through the items in need of sorting once and realizes nothing needs to be sorted.
+  In the average case, 
 
 6.4
 - On any pass of bubbleSort, if no changes are made, then the relations between all the values are those desired, and the sort is done.
