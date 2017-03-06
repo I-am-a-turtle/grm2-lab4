@@ -23,7 +23,8 @@ public class Reader{
       String fileaddress = in.nextLine();
       String filenumbers = in.nextLine();
       String separated = filenumbers.replaceAll("[\\s]", "\n");
-      String su = separated.replaceAll("^[\\n]+[0-9]{4}[\\n]", "");
+      String su1 = separated.replaceAll("[^\\n]+[\\n]", "");
+      String su2 = separated.replaceAll("[\\s][^\\s]+","")
       String personalStr = separated.replaceAll("[^\\n]+[\\n]", "");
       String divide = in.nextLine();
       String alldata = filename + ", " + fileaddress + ", " + filenumbers;

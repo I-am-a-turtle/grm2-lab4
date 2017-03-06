@@ -61,7 +61,7 @@ public class Student {
   public String toString() {
     String info = "The student's name is " + getName() + ".\n";
     info = info + "The student's address is " + getAddress() + ".\n";
-    info = info + "The student's campus phone number is " + getCampus() + ".\n";
+    //info = info + "The student's campus phone number is " + getCampus() + ".\n";
     info = info + "The student's SU box is " + getSU() + ".\n";
     info = info + "The student's home or cell phone number is " + getPersonal() + ".";
     return info;
@@ -73,7 +73,7 @@ public class Student {
     //System.out.println(test.getName());
     test.addAddress("Vanostravis 3");
     //System.out.println(test.getAddress());
-    test.addCampus("9876543210");
+    //test.addCampus("9876543210");
     //System.out.println(test.getCampus());
     test.addSU("1995");
     //System.out.println(test.getSU());
@@ -81,7 +81,5 @@ public class Student {
     //System.out.println(test.getPersonal());
 
     System.out.println(test.toString());
-
-    System.out.println("Alison Wong".compareTo("Alison Wang"));
   }
 }
