@@ -33,13 +33,13 @@ public class Student {
     return this.address;
   }
 
-  public void addCampus(String args){
+  /*public void addCampus(String args){
     this.campusPhone = Long.valueOf(args);
   }
 
   public Long getCampus(){
     return this.campusPhone;
-  }
+  }*/
 
   public void addSU(String args){
     this.suBox = Integer.valueOf(args);

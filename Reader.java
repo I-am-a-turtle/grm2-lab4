@@ -10,6 +10,11 @@ public class Reader{
 
     Scanner in = new Scanner(System.in);
 
+    Vector<String> names = new Vector<String>();
+    Vector<String> addresses = new Vector<String>();
+    Vector<String> campus = new Vector<String>();
+    Vector<String> suBox = new Vector<String>();
+    Vector<String> personal = new Vector<String>();
     //code for spitting out all the data
     while (in.hasNextLine()){
       String filename = in.nextLine();
@@ -17,21 +22,21 @@ public class Reader{
       //filename = filename + ", "+ in.nextLine();
       String fileaddress = in.nextLine();
       String filenumbers = in.nextLine();
+      String separated = filenumbers.replaceAll("[\\s]", "\n");
+      String su = separated.replaceAll("^[\\n]+[0-9]{4}[\\n]", "");
+      String personalStr = separated.replaceAll("[^\\n]+[\\n]", "");
       String divide = in.nextLine();
       String alldata = filename + ", " + fileaddress + ", " + filenumbers;
 
-      System.out.println(alldata);
+      System.out.println(su);
+      names.add(filename);
+      addresses.add(fileaddress);
+
+      /*campus.add(separated.nextLine());
+      suBox.add(separated.nextLine());
+      personal.add(separated.nextLine());*/
     }
     //code for parsing the data in good categories
-    Vector<String> names = new Vector<String>();
-    Vector<String> addresses = new Vector<String>();
-    Vector<String> numbers = new Vector<String>();
-    while (in.hasNextLine()){
-      names.add(in.nextLine());
-      addresses.add(in.nextLine());
-      numbers.add(in.nextLine());
-      String divide = in.nextLine();
+    //System.out.println(names.toString());
   }
-}
-
 }

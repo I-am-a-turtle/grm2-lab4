@@ -3,19 +3,18 @@ Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 */
 import structure5.*;
 import java.util.Comparator;
-import java.util.Vector;
 
 public class MyVector<E> extends Vector<E>{
 
   public MyVector(){
     super();
+
   }
 
-  protected static void swap(int i, int j){
-    E temp = new E();
-    Vector.elementAt(i) = temp;
-    Vector.set(i, Vector.elementAt(j));
-    Vector.set(j, temp);
+  protected void swap(int i, int j){
+    E temp = elementAt(i) ;
+    set(i, elementAt(j));
+    set(j, temp);
   }
 
   public void sort(Comparator<E> c){
@@ -23,10 +22,10 @@ public class MyVector<E> extends Vector<E>{
     //post: sort this.myV in order determined by c
 
     //bubble-sort for now...
-    for (int i = Vector.size(); i > 0; i--){
+    for (int i = size(); i > 0; i--){
       boolean swapped = false;
       for (int j = 1; j <= i; j++){
-        if (c.compare(Vector.elementAt(j-1), Vector.elementAt(j)) > 0){
+        if (c.compare(elementAt(j-1), elementAt(j)) > 0){
           swap(j, j-1);
           swapped = true;
         }
@@ -38,7 +37,7 @@ public class MyVector<E> extends Vector<E>{
   }
 
   public static void main(String args){
-    MyVector test = new MyVector();
+    MyVector<Student> test = new MyVector<Student>();
     Student a = new Student();
     a.addName("Brady Dill");
     a.addAddress("Exo Dimension");
