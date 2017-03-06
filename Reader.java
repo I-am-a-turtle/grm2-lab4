@@ -10,33 +10,55 @@ public class Reader{
 
     Scanner in = new Scanner(System.in);
 
+    MyVector<Student> students = new MyVector<Student>();
+
+    //These vectors hold the different subsets of information for easy filing into
+    //student objects
     Vector<String> names = new Vector<String>();
     Vector<String> addresses = new Vector<String>();
-    Vector<String> campus = new Vector<String>();
     Vector<String> suBox = new Vector<String>();
     Vector<String> personal = new Vector<String>();
-    //code for spitting out all the data
+
+    //code for parsing the data
     while (in.hasNextLine()){
-      String filename = in.nextLine();
-      //filename = filename + ", "+ in.nextLine();
-      //filename = filename + ", "+ in.nextLine();
-      String fileaddress = in.nextLine();
-      String filenumbers = in.nextLine();
-      String separated = filenumbers.replaceAll("[\\s]", "\n");
-      String su1 = separated.replaceAll("[^\\n]+[\\n]", "");
-      String su2 = separated.replaceAll("[\\s][^\\s]+","");
-      String personalStr = separated.replaceAll("[^\\n]+[\\n]", "");
-      String divide = in.nextLine();
-      String alldata = filename + ", " + fileaddress + ", " + filenumbers;
+      String fileName = in.nextLine();
+      String fileAddress = in.nextLine();
+      String fileNumbers = in.nextLine();
+      String separated = fileNumbers.replaceFirst("[\\s]", "\n");
+      String suTemp = separated.replaceAll("[^\\n]+[\\n]", "");
+      String suStr = suTemp.replaceAll("[\\s][^\\s]+","");
+      String personalStr = separated.replaceAll("[^\\s]+[\\s]", "");
+      String dividerTrash = in.nextLine(); //unnecessary stuff that must be thrown out
 
-      names.add(filename);
-      addresses.add(fileaddress);
-
-      /*campus.add(separated.nextLine());
-      suBox.add(separated.nextLine());
-      personal.add(separated.nextLine());*/
+      names.add(fileName);
+      addresses.add(fileAddress);
+      suBox.add(suStr);
+      personal.add(personalStr);
     }
-    //code for parsing the data in good categories
-    //System.out.println(names.toString());
+
+    //creates Students
+    for (int i = 0; i < names.size()-1; i++){
+      Student bird = new Student();
+      bird.addName(names.elementAt(i));
+      bird.addAddress(addresses.elementAt(i));
+      bird.addSU(suBox.elementAt(i));
+      bird.addPersonal(personal.elementAt(i));
+      students.add(bird);
+    }
+
+    NameComparator nc = new NameComparator();
+    students.sort(nc);
+    System.out.println("Information for the student first in a phonebook sorted by first name:");
+    System.out.println(students.elementAt(0).toString());
+
+    SUComparator sc = new SUComparator();
+    students.sort(sc);
+    System.out.println("Information for the student with the smallest SU box number:");
+    System.out.println(students.elementAt(0).toString());
+    System.out.println("Information for the student with the largest SU box number:");
+    System.out.println(students.elementAt(students.size()-1).toString());
+
+    
+
   }
 }

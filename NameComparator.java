@@ -3,7 +3,7 @@ Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 */
 
 import structure5.*;
-public class NameComparator<Student> implements java.util.Comparator<Student>{
+public class NameComparator implements java.util.Comparator<Student>{
 
 //compares students names via alphabet
   public int compare(Student a, Student b){

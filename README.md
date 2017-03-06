@@ -40,9 +40,9 @@ Contents of the Java files:
 - Comparators.java contains the information necessary to sort two Student objects based on certain attributes
 - Analyze.java contains the instructions to create a MyVector, read in a phonebook, create Student objects from it and store them in MyVector, and sort the Student objects based on different comparators
 
-Answers:
-- The student whose name appears first is [].
-- The student with the smallest SU box is [], and the box's number is []. The student with the longest SU box is [], and box's number is [].
+Answers based off newphonebook.txt:
+- The student whose name appears first in a phonebook sorted alphabetically by first name is Aalayah Rasheed.
+- The student with the smallest SU box is Julia B Nawrocki, and the box's number is 1000. The student with the longest SU box is Kristof Redei, and box's number is 5008.
 - The student with the most vowels in their name is [].
 - The address shared by the most students is [], and their names are [...].
 - The ten most common area codes are [...].
