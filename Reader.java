@@ -51,15 +51,15 @@ public class Reader{
     //a)
     NameComparator nc = new NameComparator();
     students.sort(nc);
-    System.out.println("Information for the student first in a phonebook sorted by first name:");
+    System.out.println("(a) Information for the student first in a phonebook sorted by first name:");
     System.out.println(students.elementAt(0).toString());
 
     //b)
     SUComparator sc = new SUComparator();
     students.sort(sc);
-    System.out.println("Information for the student with the smallest SU box number:");
+    System.out.println("(b.1) Information for the student with the smallest SU box number:");
     System.out.println(students.elementAt(0).toString());
-    System.out.println("Information for the student with the largest SU box number:");
+    System.out.println("(b.2) Information for the student with the largest SU box number:");
     System.out.println(students.elementAt(students.size()-1).toString());
 
     //c)
@@ -79,7 +79,7 @@ public class Reader{
         winningStudent = curStu;
       }
     }
-    System.out.println("Information for the student with the most vowels in their name:");
+    System.out.println("(c) Information for the student with the most vowels in their name:");
     System.out.println(winningStudent.toString());
 
     //d)
@@ -92,20 +92,26 @@ public class Reader{
         //phone number does not exist, do nothing
       } else {
         String areacodes = area.substring(0,3);
-        //System.out.println(areacodes);
+        //takes just the area code portion
         if (tracker.isEmpty()){
           Association<String,Integer> fill = new Association<String,Integer>(areacodes,1);
           tracker.add(fill);
+          //creates the first association of areacode and count
         } else {
-          //System.out.println(tracker.size());
-          for (int l = 0; l < tracker.size(); l++){
-            if (tracker.get(l).getKey().equals(areacodes)){
-              tracker.get(l).setValue(tracker.get(l).getValue() + 1);
-            } if (l == tracker.size()) {
-              System.out.println(tracker.size());
+          //checks to see if the an area code is already within the vector
+          for (int l = 0; l <= tracker.size(); l++){
+            if (l < tracker.size()){
+              if (tracker.get(l).getKey().equals(areacodes)){
+                //then adds one to the count
+                tracker.get(l).setValue(tracker.get(l).getValue() + 1);
+                break; //stops checking once updated
+              }
+            }
+            else {
+              //creates a new association if the vector does not contain an area code
               Association<String,Integer> newArea = new Association<String,Integer>(areacodes,1);
               tracker.add(newArea);
-              break;
+              break; //stops checking once updated
             }
           }
         }
@@ -113,10 +119,11 @@ public class Reader{
     }
     CountComparator cc = new CountComparator();
     tracker.sort(cc);
-    System.out.println(tracker.toString());
-    /*for (int m = tracker.size()-1; m > tracker.size()-10; m--){
-      //String print =
-      System.out.println(tracker.elementAt(m).getKey().toString());
-    }*/
+    //System.out.println(tracker.toString());
+    System.out.println("(e) The most common area codes in descending order: ");
+    for (int m = tracker.size()-1; m > tracker.size()-11; m--){
+      System.out.print(tracker.elementAt(m).getKey().toString() + ", ");
+    }
+    System.out.println();
   }
 }

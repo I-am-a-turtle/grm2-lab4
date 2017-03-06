@@ -43,6 +43,6 @@ Contents of the Java files:
 Answers based off newphonebook.txt:
 - The student whose name appears first in a phonebook sorted alphabetically by first name is Aalayah Rasheed.
 - The student with the smallest SU box is Julia B Nawrocki, and the box's number is 1000. The student with the longest SU box is Kristof Redei, and box's number is 5008.
-- The student with the most vowels in their name is [].
+- The student with the most vowels in their name is [Pierre-Alexandre C Meloty-Kapella].
 - The address shared by the most students is [], and their names are [...].
-- The ten most common area codes are [...].
+- The ten most common area codes are [203, 413, 718, 914, 978, 781, 212, 973, 860, 617].
