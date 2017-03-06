@@ -41,13 +41,11 @@ public class MyVector<E> extends Vector<E>{
     Student a = new Student();
     a.addName("Brady Dill");
     a.addAddress("Exo Dimension");
-    a.addCampus("-1");
     a.addSU("9999");
     a.addPersonal("0123456789");
     Student b = new Student();
     b.addName("Adam Falk");
     b.addAddress("Williams College");
-    a.addCampus("-1");
     a.addSU("0000");
     a.addPersonal("9876543210");
     test.add(a);

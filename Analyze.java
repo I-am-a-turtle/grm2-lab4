@@ -25,17 +25,16 @@ public class Analyze{
   public static void main(String[] args){
 
     //ansers question (a)
-    System.out.print("(a) Which student appears first in the phone book?: ")
+    System.out.print("(a) Which student appears first in the phone book?: ");
     Scanner in = new Scanner(System.in);
     String filename = in.nextLine();
-    while (filename.equals("")){
+    if (filename.equals("")){
       filename = in.nextLine();
     }else{
       System.out.println(filename);
     }
-
     //ansers question (b)
-    System.out.print("(b) Which student has the smallest SU Box number?: ")
+    System.out.print("(b) Which student has the smallest SU Box number?: ");
 
 
   }

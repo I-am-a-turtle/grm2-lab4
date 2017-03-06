@@ -24,12 +24,11 @@ public class Reader{
       String filenumbers = in.nextLine();
       String separated = filenumbers.replaceAll("[\\s]", "\n");
       String su1 = separated.replaceAll("[^\\n]+[\\n]", "");
-      String su2 = separated.replaceAll("[\\s][^\\s]+","")
+      String su2 = separated.replaceAll("[\\s][^\\s]+","");
       String personalStr = separated.replaceAll("[^\\n]+[\\n]", "");
       String divide = in.nextLine();
       String alldata = filename + ", " + fileaddress + ", " + filenumbers;
 
-      System.out.println(su);
       names.add(filename);
       addresses.add(fileaddress);
 
