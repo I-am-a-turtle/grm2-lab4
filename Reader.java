@@ -105,6 +105,7 @@ public class Reader{
               System.out.println(tracker.size());
               Association<String,Integer> newArea = new Association<String,Integer>(areacodes,1);
               tracker.add(newArea);
+              break;
             }
           }
         }
