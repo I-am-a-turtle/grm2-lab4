@@ -69,26 +69,7 @@ public class Reader{
       int count = 0;
       Student curStu = students.elementAt(i);
       for (int j = 0; j < curStu.getName().length()-1; j++){
-
-        /*
-        //vowel checkers
-        if (curStu.getName().substring(j,j+1).contains("a")){
-          count++;
-        }
-        if (curStu.getName().substring(j,j+1).contains("e")){
-          count++;
-        }
-        if (curStu.getName().substring(j,j+1).contains("i")){
-          count++;
-        }
-        if (curStu.getName().substring(j,j+1).contains("o")){
-          count++;
-        }
-        if (curStu.getName().substring(j,j+1).contains("u")){
-          count++;
-        }
-        */
-        if (curStu.getName().substring(j,j+1).contains("^[aeiou]+$")){
+        if (curStu.getName().substring(j,j+1).matches("^[aeiou]+$")){
           count++;
         }
 
@@ -100,5 +81,41 @@ public class Reader{
     }
     System.out.println("Information for the student with the most vowels in their name:");
     System.out.println(winningStudent.toString());
+
+    //d)
+    MyVector<Association<String,Integer>> tracker = new MyVector<Association<String,Integer>>();
+    for (int k = 0; k < students.size()-1; k++){
+      String area = students.elementAt(k).getPersonal().toString();
+      //System.out.println(area);
+
+      if (Long.valueOf(area) < 0){
+        //phone number does not exist, do nothing
+      } else {
+        String areacodes = area.substring(0,3);
+        //System.out.println(areacodes);
+        if (tracker.isEmpty()){
+          Association<String,Integer> fill = new Association<String,Integer>(areacodes,1);
+          tracker.add(fill);
+        } else {
+          //System.out.println(tracker.size());
+          for (int l = 0; l < tracker.size(); l++){
+            if (tracker.get(l).getKey().equals(areacodes)){
+              tracker.get(l).setValue(tracker.get(l).getValue() + 1);
+            } if (l == tracker.size()) {
+              System.out.println(tracker.size());
+              Association<String,Integer> newArea = new Association<String,Integer>(areacodes,1);
+              tracker.add(newArea);
+            }
+          }
+        }
+      }
+    }
+    CountComparator cc = new CountComparator();
+    tracker.sort(cc);
+    System.out.println(tracker.toString());
+    /*for (int m = tracker.size()-1; m > tracker.size()-10; m--){
+      //String print =
+      System.out.println(tracker.elementAt(m).getKey().toString());
+    }*/
   }
 }
