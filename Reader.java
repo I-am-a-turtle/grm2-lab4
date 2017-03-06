@@ -112,6 +112,7 @@ public class Reader{
               Association<String,Integer> newArea = new Association<String,Integer>(areacodes,1);
               tracker.add(newArea);
               break; //stops checking once updated
+
             }
           }
         }
