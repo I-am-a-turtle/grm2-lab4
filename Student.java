@@ -49,7 +49,11 @@ public class Student {
     String info = "The student's name is " + getName() + ".\n";
     info = info + "The student's address is " + getAddress() + ".\n";
     info = info + "The student's SU box is " + getSU() + ".\n";
-    info = info + "The student's home or cell phone number is " + getPersonal() + ".\n";
+    if (getPersonal() < 0){
+      info = info + "The student does not have a home or cell phone number on file.\n";
+    }else{
+      info = info + "The student's home or cell phone number is " + getPersonal() + ".\n";
+    }
     return info;
   }
 

@@ -46,11 +46,15 @@ public class Reader{
       students.add(bird);
     }
 
+    //Answering questions
+
+    //a)
     NameComparator nc = new NameComparator();
     students.sort(nc);
     System.out.println("Information for the student first in a phonebook sorted by first name:");
     System.out.println(students.elementAt(0).toString());
 
+    //b)
     SUComparator sc = new SUComparator();
     students.sort(sc);
     System.out.println("Information for the student with the smallest SU box number:");
@@ -58,7 +62,43 @@ public class Reader{
     System.out.println("Information for the student with the largest SU box number:");
     System.out.println(students.elementAt(students.size()-1).toString());
 
-    
+    //c)
+    int winningCount = 0;
+    Student winningStudent = new Student();
+    for (int i = 0; i < students.size()-1; i++){
+      int count = 0;
+      Student curStu = students.elementAt(i);
+      for (int j = 0; j < curStu.getName().length()-1; j++){
 
+        /*
+        //vowel checkers
+        if (curStu.getName().substring(j,j+1).contains("a")){
+          count++;
+        }
+        if (curStu.getName().substring(j,j+1).contains("e")){
+          count++;
+        }
+        if (curStu.getName().substring(j,j+1).contains("i")){
+          count++;
+        }
+        if (curStu.getName().substring(j,j+1).contains("o")){
+          count++;
+        }
+        if (curStu.getName().substring(j,j+1).contains("u")){
+          count++;
+        }
+        */
+        if (curStu.getName().substring(j,j+1).contains("^[aeiou]+$")){
+          count++;
+        }
+
+      }
+      if (count > winningCount){
+        winningCount = count;
+        winningStudent = curStu;
+      }
+    }
+    System.out.println("Information for the student with the most vowels in their name:");
+    System.out.println(winningStudent.toString());
   }
 }

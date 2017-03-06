@@ -20,6 +20,7 @@ public class MyVector<E> extends Vector<E>{
   public void sort(Comparator<E> c){
     //pre: c is a valid comparator
     //post: sort this.myV in order determined by c
+    //bubbleSort based on in-class example
 
     for (int i = size()-1; i > 0; i--){
       boolean swapped = false;
