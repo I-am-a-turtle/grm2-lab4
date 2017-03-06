@@ -18,19 +18,20 @@ public class Reader{
       String fileaddress = in.nextLine();
       String filenumbers = in.nextLine();
       String divide = in.nextLine();
-      String alldata = filename + ", " + fileaddress + ", " + filenumbers
+      String alldata = filename + ", " + fileaddress + ", " + filenumbers;
 
       System.out.println(alldata);
     }
     //code for parsing the data in good categories
-    Vector<String> names = new Vector<String>;
-    Vector<String> addresses = new Vector<String>;
-    Vector<String> numbers = new Vector<String>;
+    Vector<String> names = new Vector<String>();
+    Vector<String> addresses = new Vector<String>();
+    Vector<String> numbers = new Vector<String>();
     while (in.hasNextLine()){
       names.add(in.nextLine());
       addresses.add(in.nextLine());
       numbers.add(in.nextLine());
       String divide = in.nextLine();
   }
+}
 
 }

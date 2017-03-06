@@ -4,7 +4,7 @@ Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 
 Questions:
 5.5:
-- The runtime for the code in question is O(n^3) because it uses three for loops.
+- The runtime for the code in question is O(n^3) because it uses three nested for loops which run through all n elements.
 
 5.23:
 - Prove that 5^n - 4n - 1 is divisible by 16 for all n >= 0;
@@ -26,16 +26,13 @@ Questions:
   Therefore Sum(n, i = 1) of 2i = n(n + 1)
 
 6.3
-- How does bubbleSort perform in the best and average cases?
-- In the best case, bubbleSort will run through the items in need of sorting once and realizes nothing needs to be sorted.
-  In the average case, 
+- In the best case, bubbleSort will run through the items in need of sorting once and realizes nothing needs to be sorted, so no changes will be made and the program will finish.
+-  In the average case, bubbleSort will run through about half the items, swapping them along the way.
 
 6.4
-- On any pass of bubbleSort, if no changes are made, then the relations between all the values are those desired, and the sort is done.
-  Using this information, how fast will bubbleSort run in worst, best and average cases?
-- In the best case, bubbleSort only has to go through things once, so its performance is O(n)
-  In the worse case, bubbleSort has to go through both an outer while loop and an inner for loop, which yields O(n^2)
-  The average case is the worst case divided by two, which again yields O(n^2)
+- In the best case, bubbleSort only has to go through things once, so its performance is O(n).
+-  In the worse case, bubbleSort has to go through both an outer while loop and an inner for loop, which yields O(n^2).
+-  The average case is the worst case divided by two, which again yields O(n^2).
 
 Contents of the Java files:
 - Student.java contains the Student class and all necessary attributes

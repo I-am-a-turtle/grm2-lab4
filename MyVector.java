@@ -1,23 +1,24 @@
 /*
 Will Fung (W 7pm) and Grace Mazzarella (W 1pm)
 */
-//import structure5.*;
+import structure5.*;
 import java.util.Comparator;
 import java.util.Vector;
 
-public class MyVector<E> extends Vector {
+public class MyVector<E> extends Vector<E>{
 
   public MyVector(){
     super();
   }
 
   protected static void swap(int i, int j){
-    E temp = Vector.elementAt(i);
+    E temp = new E();
+    Vector.elementAt(i) = temp;
     Vector.set(i, Vector.elementAt(j));
     Vector.set(j, temp);
   }
 
-  public static void sort(Comparator<E> c){
+  public void sort(Comparator<E> c){
     //pre: c is a valid comparator
     //post: sort this.myV in order determined by c
 
